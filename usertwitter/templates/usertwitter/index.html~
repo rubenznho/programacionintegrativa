@@ -1,0 +1,12 @@
+{% load staticfiles %}
+<div>
+        <h1><a href="/">Traballo Programación Integrativa</a></h1>
+        <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    </div>
+
+    {% for usuario in usuarios %}
+        <div>
+            <p>usuario: {{ usuario.nombre }}</p>
+            <h1><a href="">{{ usuario.login }}</a></h1>
+        </div>
+    {% endfor %}
