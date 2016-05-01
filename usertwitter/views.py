@@ -14,7 +14,7 @@ consumer = oauth.Consumer(key=CONSUMER_KEY, secret=CONSUMER_SECRET)
 access_token = oauth.Token(key=ACCESS_KEY, secret=ACCESS_SECRET)
 client = oauth.Client(consumer, access_token)
 
-
+#Proba push
 #Auxiliar: analiza que dispositivo usa el usuario
 def DispositivoUsuario(seguidor):
         linea = seguidor['status']['source']
@@ -31,6 +31,7 @@ def DispositivoUsuario(seguidor):
 
 #Entrada: login twitter
 #Salida: lista de seguidores en formato Ids
+
 def IdsSeguidores(usuario):
         params = {'screen_name': usuario, 'user_id' : usuario}
         twurl = "https://api.twitter.com/1.1/followers/ids.json?"+urllib.urlencode(params)       
